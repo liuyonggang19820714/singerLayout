@@ -52,7 +52,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self arrayAll];
+   
+    
+    
     
     int iXmargin = (self.view.frame.size.width - (viewWidth*column))/(column+1);
     
@@ -67,11 +69,37 @@
             int x = iXmargin +(viewWidth+iXmargin)*iColumn;
             int y = Ymargin +(viewHeight+ viewYmargin)*iRow;
             
-            UIView*view1 = [[UIView alloc]initWithFrame:CGRectMake(x, y , viewWidth, viewHeight)];
-            //  view1.backgroundColor = [UIColor redColor];
-            [self.view addSubview:view1];
+//            UIView*view1 = [[UIView alloc]initWithFrame:CGRectMake(x, y , viewWidth, viewHeight)];
+//            //  view1.backgroundColor = [UIColor redColor];
+//            [self.view addSubview:view1];
+//            
+//            [self addSubControl:view1 model:model2];
             
-            [self addSubControl:view1 model:model2];
+            // 读取xibw文件里的视图
+            NSArray*arr = [[NSBundle mainBundle]loadNibNamed:@"singer" owner:nil options:nil];
+            
+            // 获取数组的第一个元素
+            UIView*viewFromXib = [arr firstObject];
+            
+            viewFromXib.frame = CGRectMake(x, y , viewWidth, viewHeight);
+            [self.view addSubview:viewFromXib];
+            
+            // 找到view里面图片控件
+            UIImageView*img = viewFromXib.subviews[0];
+            img.image = [UIImage imageNamed:model2.pic];
+            
+            // 找到view 里label
+           // UILabel*label = viewFromXib.subviews[1]; // 通过数组下标的方式访问子控件
+            
+            UILabel*label = [viewFromXib viewWithTag:10];   //通过tag的方式访问子控件
+            
+            
+            label.text = model2.songname;
+            
+            UIButton*btn = viewFromXib.subviews[2];
+            
+            [btn addTarget:self action:@selector(download:) forControlEvents:UIControlEventTouchUpInside];
+            
         }
         
         
@@ -105,15 +133,17 @@
     
      [btn setBackgroundImage:[UIImage imageNamed:@"highlighted"] forState:UIControlStateHighlighted];
     
-    [btn addTarget:self action:@selector(download) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(download:) forControlEvents:UIControlEventTouchUpInside];
     
     [uiviewParent addSubview:btn];
     
     
 }
 
--(void)download
+-(void)download:(UIButton*)btn
 {
+    btn.enabled = NO;
+    
     UILabel*tipLabel = [[UILabel alloc]initWithFrame:CGRectMake(110, 400, 100, 30)];
     tipLabel.backgroundColor = [UIColor grayColor];
     [self.view addSubview:tipLabel];

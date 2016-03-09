@@ -31,6 +31,7 @@
 		9A6D4D8A1C8E710B007578B7 /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6D4D7B1C8E710B007578B7 /* normal.png */; };
 		9A6D4D8B1C8E710B007578B7 /* picList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A6D4D7C1C8E710B007578B7 /* picList.plist */; };
 		9A6D4D8E1C8E7148007578B7 /* singerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6D4D8D1C8E7148007578B7 /* singerModel.m */; };
+		9A6D4E521C900508007578B7 /* singer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A6D4E511C900508007578B7 /* singer.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		9A6D4D7C1C8E710B007578B7 /* picList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = picList.plist; sourceTree = "<group>"; };
 		9A6D4D8C1C8E7148007578B7 /* singerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singerModel.h; sourceTree = "<group>"; };
 		9A6D4D8D1C8E7148007578B7 /* singerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = singerModel.m; sourceTree = "<group>"; };
+		9A6D4E511C900508007578B7 /* singer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = singer.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				9A6D4D781C8E710B007578B7 /* 8.jpg */,
 				9A6D4D791C8E710B007578B7 /* 9.jpg */,
 				9A6D4D7A1C8E710B007578B7 /* highlighted.png */,
+				9A6D4E511C900508007578B7 /* singer.xib */,
 				9A6D4D7B1C8E710B007578B7 /* normal.png */,
 				9A6D4D7C1C8E710B007578B7 /* picList.plist */,
 			);
@@ -315,6 +318,7 @@
 				9A6D4D851C8E710B007578B7 /* 6.jpg in Resources */,
 				9A6D4D7F1C8E710B007578B7 /* 11.jpg in Resources */,
 				9A6D4D471C8E70F6007578B7 /* Assets.xcassets in Resources */,
+				9A6D4E521C900508007578B7 /* singer.xib in Resources */,
 				9A6D4D811C8E710B007578B7 /* 2.jpg in Resources */,
 				9A6D4D861C8E710B007578B7 /* 7.jpg in Resources */,
 				9A6D4D831C8E710B007578B7 /* 4.jpg in Resources */,
@@ -572,6 +576,7 @@
 				9A6D4D661C8E70F6007578B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A6D4D671C8E70F6007578B7 /* Build configuration list for PBXNativeTarget "singerLayout2Tests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +585,7 @@
 				9A6D4D691C8E70F6007578B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A6D4D6A1C8E70F6007578B7 /* Build configuration list for PBXNativeTarget "singerLayout2UITests" */ = {
 			isa = XCConfigurationList;
@@ -588,6 +594,7 @@
 				9A6D4D6C1C8E70F6007578B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
